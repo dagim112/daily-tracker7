@@ -1,27 +1,12 @@
-{
-  "expo": {
-    "name": "Daily Tracker",
-    "slug": "daily-tracker",
-    "scheme": "dailytracker",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "automatic",
-    "plugins": [
-      [
-        "expo-notifications",
-        {
-          "icon": "./assets/icon.png",
-          "color": "#1E90FF"
-        }
-      ]
-    ],
-    "android": {
-      "package": "com.example.dailytracker",
-      "permissions": ["NOTIFICATIONS"]
-    },
-    "ios": {
-      "supportsTablet": true
-    }
-  }
+import 'react-native-gesture-handler';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from './src/navigation/RootNavigator';
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <RootNavigator />
+    </NavigationContainer>
+  );
 }
